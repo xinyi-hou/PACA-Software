@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="MAxPane" prefHeight="541.0" prefWidth="1005.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="software.controller.ChooseNICFrameController">
+   <children>
+      <BorderPane prefHeight="549.0" prefWidth="1043.0">
+         <left>
+            <VBox prefHeight="487.0" prefWidth="197.0" style="-fx-background-color: #6A1DB2;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="button1_nic" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#chooseNICEvent" prefHeight="40.0" prefWidth="198.0" text="选择网卡" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/NIC.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="10.0" />
+                     </VBox.margin>
+                     <stylesheets>
+                        <URL value="@../../software/css/styling.css" />
+                        <URL value="@../css/styling.css" />
+                     </stylesheets>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#analysisEvent" prefHeight="40.0" prefWidth="198.0" text="协议分析" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/packet.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                     <stylesheets>
+                        <URL value="@../../software/css/styling.css" />
+                        <URL value="@../css/styling.css" />
+                     </stylesheets>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="button2_host" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#scanHostEvent" prefHeight="40.0" prefWidth="197.0" text="扫描主机" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/scan.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                     <stylesheets>
+                        <URL value="@../../software/css/styling.css" />
+                        <URL value="@../css/styling.css" />
+                     </stylesheets>
+                  </Button>
+                  <Button fx:id="button3_arp" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#arpAttackEvent" prefHeight="40.0" prefWidth="197.0" text="ARP攻击" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/aim.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                     <stylesheets>
+                        <URL value="@../../software/css/styling.css" />
+                        <URL value="@../css/styling.css" />
+                     </stylesheets>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#ddosAttackEvent" prefHeight="40.0" prefWidth="197.0" text="DDoS攻击" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/dead.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                     <stylesheets>
+                        <URL value="@../../software/css/styling.css" />
+                        <URL value="@../css/styling.css" />
+                     </stylesheets>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#extendEvent" prefHeight="40.0" prefWidth="197.0" text="更多功能" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/star.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                     <stylesheets>
+                        <URL value="@../../software/css/styling.css" />
+                        <URL value="@../css/styling.css" />
+                     </stylesheets>
+                  </Button>
+               </children>
+            </VBox>
+         </left>
+         <top>
+            <HBox prefHeight="60.0" prefWidth="1046.0" style="-fx-background-color: #622A93;" BorderPane.alignment="CENTER_LEFT">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="60.0" prefWidth="228.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/attack.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="WHITE" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="PA&amp;CA software">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="MontserratSubrayada-Bold" size="17.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </HBox>
+                  <ImageView fx:id="bt_minus" fitHeight="22.0" fitWidth="22.0" onMouseClicked="#minusEvent" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets left="725.0" top="18.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="@icons/big.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="bt_close" fitHeight="31.0" fitWidth="31.0" onMouseClicked="#closeEvent" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/small.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="16.0" top="14.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+         </top>
+         <right>
+            <AnchorPane fx:id="rootPane" prefHeight="489.0" prefWidth="842.0" BorderPane.alignment="CENTER">
+               <children>
+                  <BorderPane fx:id="nicPane" prefHeight="489.0" prefWidth="841.0">
+                     <top>
+                        <VBox prefHeight="489.0" prefWidth="808.0">
+                           <children>
+                              <HBox prefHeight="73.0" prefWidth="808.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="522.0">
+                                       <children>
+                                          <Text fill="#6a1f7f" strokeType="OUTSIDE" strokeWidth="0.0" text="从以下列表中选择网卡">
+                                             <HBox.margin>
+                                                <Insets left="20.0" right="20.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font name="Microsoft YaHei" size="16.0" />
+                                             </font>
+                                          </Text>
+                                          <TextField fx:id="tf_chosen" prefHeight="32.0" prefWidth="65.0" />
+                                          <Button fx:id="bt_choose" mnemonicParsing="false" onAction="#bt_chooseEvent" prefHeight="32.0" prefWidth="65.0" styleClass="button2" stylesheets="@../css/button2.css" text="确 定" textFill="#6a1f7f">
+                                             <HBox.margin>
+                                                <Insets left="20.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                       <opaqueInsets>
+                                          <Insets left="10.0" />
+                                       </opaqueInsets>
+                                    </HBox>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </HBox>
+                              <TableView fx:id="tv_NIC" prefHeight="355.0" prefWidth="726.0" stylesheets="@../css/styling.css">
+                                <columns>
+                                  <TableColumn fx:id="tc_num" prefWidth="40.0" text="序号" />
+                                  <TableColumn fx:id="tc_nicName" prefWidth="318.0" text="名称" />
+                                    <TableColumn fx:id="tc_nicIP" prefWidth="302.0" text="IP地址" />
+                                    <TableColumn fx:id="tc_nicMAC" prefWidth="149.0" text="MAC地址" />
+                                </columns>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="15.0" right="15.0" />
+                                 </VBox.margin>
+                              </TableView>
+                              <Text fill="#4d175e" strokeType="OUTSIDE" strokeWidth="0.0" text="注：如果以上某行显示IP地址是IPv6而不是IPv4地址说明不支持该网络接口。">
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="5.0" />
+                                 </VBox.margin>
+                              </Text>
+                           </children>
+                        </VBox>
+                     </top>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>

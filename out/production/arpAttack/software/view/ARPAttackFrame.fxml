@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="489.0" prefWidth="819.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="software.controller.ARPAttackFrameController">
+   <children>
+      <HBox prefHeight="489.0" prefWidth="819.0">
+         <children>
+            <VBox prefHeight="469.0" prefWidth="365.0">
+               <children>
+                  <Text fill="#6a1f7f" strokeType="OUTSIDE" strokeWidth="0.0" text="局域网中可攻击的主机">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="3.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <TableView fx:id="tv_host" prefHeight="200.0" prefWidth="375.0" stylesheets="@../css/styling.css">
+                    <columns>
+                      <TableColumn fx:id="tc_num" prefWidth="50.0" text="序号" />
+                      <TableColumn fx:id="tc_ip" prefWidth="149.0" text="IP地址" />
+                        <TableColumn fx:id="tc_mac" prefWidth="169.0" text="MAC地址" />
+                    </columns>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </TableView>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Text fill="#48115b" lineSpacing="5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="注：ARP欺骗攻击可以分为两种。                             第一种是，中间人欺骗攻击，中间人故意让目标主机记录错误的ARP缓存表，导致其无法与正确的主机通信。 第二种是伪装网关欺骗，建立假网关，让被它欺骗的PC向假网关发数据，表现为断网，此时输入的元IP地址应该为网关地址(此处为192.168.134.2)。" wrappingWidth="363.52392578125">
+                           <VBox.margin>
+                              <Insets left="3.0" top="5.0" />
+                           </VBox.margin>
+                        </Text>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="3.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </VBox>
+               </children>
+               <HBox.margin>
+                  <Insets left="30.0" right="30.0" top="20.0" />
+               </HBox.margin>
+            </VBox>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <VBox prefHeight="469.0" prefWidth="336.0">
+               <HBox.margin>
+                  <Insets left="30.0" right="30.0" top="20.0" />
+               </HBox.margin>
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Text fill="#6a1f7f" strokeType="OUTSIDE" strokeWidth="0.0" text="开始ARP攻击">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="sending" fill="#6a1f7f" strokeType="OUTSIDE" strokeWidth="0.0" text="sending ARP……" wrappingWidth="122.15869140625">
+                           <HBox.margin>
+                              <Insets left="88.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Text fill="#6a1f7f" strokeType="OUTSIDE" strokeWidth="0.0" text="输入目的(被攻击)主机IP地址：" wrappingWidth="289.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Text>
+                  <TextField fx:id="tf_desIP" promptText="xxx.xxx.xxx.xxx">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Text fill="#6a1f7f" strokeType="OUTSIDE" strokeWidth="0.0" text="输入源IP地址：" wrappingWidth="289.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Text>
+                  <TextField fx:id="tf_srcIP" promptText="xxx.xxx.xxx.xxx" text="192.168.134.">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Text fill="#6a1f7f" strokeType="OUTSIDE" strokeWidth="0.0" text="输入源MAC地址(可伪装)：" wrappingWidth="289.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Text>
+                  <TextField fx:id="tf_srcMAC" text="0a-0b-01-02-03-04">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Text fill="#6a1f7f" strokeType="OUTSIDE" strokeWidth="0.0" text="输入本机(攻击方)IP地址：" wrappingWidth="289.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Text>
+                  <TextField fx:id="tf_attIP" text="192.168.134.1" />
+                  <HBox prefHeight="32.0" prefWidth="235.0" spacing="60.0">
+                     <children>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#startAttackEvent" prefHeight="32.0" prefWidth="99.0" styleClass="button2" stylesheets="@../css/button2.css" text="单向欺骗" textFill="#6a1f7f" />
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#startAttackEvent2" prefHeight="32.0" prefWidth="99.0" styleClass="button2" stylesheets="@../css/button2.css" text="双向欺骗" textFill="#6a1f7f" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="30.0" right="30.0" top="25.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#stopAttackEvent" prefHeight="32.0" prefWidth="258.0" styleClass="button2" stylesheets="@../css/button2.css" text="停  止" textFill="#6a1f7f">
+                     <VBox.margin>
+                        <Insets left="30.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <VBox prefHeight="200.0" prefWidth="100.0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

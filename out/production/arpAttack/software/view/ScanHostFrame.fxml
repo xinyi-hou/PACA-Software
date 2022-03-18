@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="scanPane" prefHeight="489.0" prefWidth="842.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="software.controller.ScanHostFrameController">
+   <children>
+      <HBox prefHeight="489.0" prefWidth="842.0">
+         <children>
+            <VBox prefHeight="469.0" prefWidth="423.0">
+               <children>
+                  <HBox prefHeight="13.0" prefWidth="294.0">
+                     <children>
+                        <Text fill="#6a1f7f" strokeType="OUTSIDE" strokeWidth="0.0" text="扫描局域网内的主机……" wrappingWidth="212.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </Text>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" onMouseClicked="#startScanEvent" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/111.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="80.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <TextArea fx:id="scanArea" prefHeight="386.0" prefWidth="213.0">
+                     <VBox.margin>
+                        <Insets top="12.0" />
+                     </VBox.margin>
+                  </TextArea>
+                  <Text fill="#6a1f7f" strokeType="OUTSIDE" strokeWidth="0.0" text="注：大约需要50秒" wrappingWidth="212.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="3.0" top="10.0" />
+                     </VBox.margin>
+                  </Text>
+               </children>
+               <HBox.margin>
+                  <Insets left="30.0" right="10.0" top="20.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="469.0" prefWidth="382.0">
+               <children>
+                  <HBox prefHeight="21.0" prefWidth="397.0">
+                     <children>
+                        <Text fill="#6a1f7f" strokeType="OUTSIDE" strokeWidth="0.0" text="局域网内存活主机的信息如下：" wrappingWidth="295.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </Text>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" onMouseClicked="#refreshEvent" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="110.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@icons/222.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <TableView fx:id="tb_host" prefHeight="386.0" prefWidth="206.0" stylesheets="@../css/styling.css">
+                    <columns>
+                      <TableColumn fx:id="tc_num" prefWidth="66.0" text="序号" />
+                      <TableColumn fx:id="tc_hostIP" prefWidth="179.0" text="IP地址" />
+                        <TableColumn fx:id="tc_hostMAC" prefWidth="183.0" text="MAC地址" />
+                    </columns>
+                     <VBox.margin>
+                        <Insets top="12.0" />
+                     </VBox.margin>
+                  </TableView>
+               </children>
+               <HBox.margin>
+                  <Insets left="20.0" right="30.0" top="20.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

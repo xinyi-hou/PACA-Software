@@ -1,0 +1,11 @@
+{  "nicNum": "1",  "nicName": "VMware Virtual Ethernet Adapter",  "nicIP": "192.168.134.1",  "nicMAC": "0-50-56-c0-0-8"}
+{  "nicNum": "2",  "nicName": "Oracle",  "nicIP": "192.168.196.2",  "nicMAC": "a-0-27-0-0-6"}
+{  "nicNum": "3",  "nicName": "VMware Virtual Ethernet Adapter",  "nicIP": "192.168.47.1",  "nicMAC": "0-50-56-c0-0-1"}
+{  "nicNum": "4",  "nicName": "Microsoft",  "nicIP": "fe80:0:0:0:60c4:8cab:931:ef34",  "nicMAC": "fe-f5-5-50-fb-7b"}
+{  "nicNum": "5",  "nicName": "Microsoft",  "nicIP": "2001:da8:9000:a835:4df7:6045:346:af08",  "nicMAC": "dc-f5-5-50-fb-7b"}
+{  "nicNum": "6",  "nicName": "Sangfor SSL VPN CS Support System VNIC",  "nicIP": "0.0.0.0",  "nicMAC": "0-ff-50-bb-86-ed"}
+{  "nicNum": "7",  "nicName": "Oracle",  "nicIP": "192.168.56.1",  "nicMAC": "a-0-27-0-0-19"}
+{  "nicNum": "8",  "nicName": "TAP-Windows Adapter V9",  "nicIP": "fe80:0:0:0:b079:5590:726b:5af0",  "nicMAC": "0-ff-79-e0-2b-29"}
+{  "nicNum": "9",  "nicName": "Microsoft",  "nicIP": "fe80:0:0:0:5c24:ad30:89cc:86c8",  "nicMAC": "dc-f5-5-50-fb-7a"}
+{  "nicNum": "10",  "nicName": "TAP-Windows Adapter V9",  "nicIP": "172.19.198.10",  "nicMAC": "0-ff-70-46-d7-e1"}
+{  "nicNum": "11",  "nicName": "Microsoft",  "nicIP": "fe80:0:0:0:c5ab:e697:9b06:a4e0",  "nicMAC": "de-f5-5-50-fb-7b"}

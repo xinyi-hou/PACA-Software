@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="packetPane" prefHeight="489.0" prefWidth="842.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="software.controller.CapturePacketFrameController">
+   <children>
+      <VBox prefHeight="489.0" prefWidth="842.0">
+         <children>
+            <HBox prefHeight="29.0" prefWidth="842.0" spacing="10.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#startEvent" prefHeight="32.0" prefWidth="64.0" styleClass="button2" stylesheets="@../css/button2.css" text="开始" textFill="#6a1f7f" />
+                  <Button mnemonicParsing="false" onAction="#clearEvent" prefWidth="64.0" styleClass="button2" stylesheets="@../css/button2.css" text="清空" textFill="#6a1f7f" />
+                  <Button mnemonicParsing="false" onAction="#stopEvent" prefWidth="64.0" styleClass="button2" stylesheets="@../css/button2.css" text="暂停" textFill="#6a1f7f" />
+                  <Button mnemonicParsing="false" onAction="#refreshEvent" prefWidth="64.0" styleClass="button2" stylesheets="@../css/button2.css" text="刷新" textFill="#6a1f7f" />
+                  <Text fill="#6a1f7f" strokeType="OUTSIDE" strokeWidth="0.0" text="过滤器：">
+                     <HBox.margin>
+                        <Insets left="81.0" top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="tf_filter" prefHeight="30.0" prefWidth="299.0" promptText="输入大写协议名称或IP地址" />
+                  <Button mnemonicParsing="false" onAction="#okEvent" prefWidth="64.0" styleClass="button2" stylesheets="@../css/button2.css" text="确定" textFill="#6a1f7f" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="15.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="447.0" prefWidth="842.0">
+               <children>
+                  <TableView fx:id="tv_packet" prefHeight="274.0" prefWidth="822.0" stylesheets="@../css/styling.css">
+                    <columns>
+                      <TableColumn fx:id="tc_num" prefWidth="36.0" text="No." />
+                      <TableColumn fx:id="tc_time" prefWidth="200.0" text="Time" />
+                        <TableColumn fx:id="tc_source" prefWidth="130.0" text="Source" />
+                        <TableColumn fx:id="tc_des" minWidth="0.0" prefWidth="133.0" text="Destination" />
+                        <TableColumn fx:id="tc_pro" prefWidth="82.0" text="Protocol" />
+                        <TableColumn fx:id="tc_length" prefWidth="65.0" text="Length" />
+                        <TableColumn fx:id="tc_info" prefWidth="175.0" text="Info" />
+                    </columns>
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </TableView>
+               </children>
+            </HBox>
+            <HBox prefHeight="152.0" prefWidth="822.0">
+               <children>
+                  <TextArea fx:id="infoArea" prefHeight="101.0" prefWidth="822.0" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="15.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
