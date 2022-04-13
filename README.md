@@ -12,7 +12,9 @@ PA_CA_Software/src/attack是各部分功能的原始代码，可以辅助理解
 (4)ARP攻击  
   根据扫描到的存活主机信息，可以选择对任一主机进行ARP攻击，目前实现的攻击有“中间人欺骗攻击”和“伪装网关欺骗攻击”，且可以实现单向欺骗和双向欺骗。  
 (5)DDoS攻击  
-  输入想要攻击的主机IP地址，选择“开始攻击”，即可对目标主机发起DDoS攻击，可以进入虚拟机查看攻击效果。  
+  输入想要攻击的主机IP地址，选择“开始攻击”，即可对目标主机发起DDoS攻击，可以进入虚拟机查看攻击效果。    
+  
+  下面是软件运行界面截图
 ![图片1](https://user-images.githubusercontent.com/62821148/163165162-c6a53b9b-7097-4da1-bc23-bb6647f944f5.png)
 ![图片2](https://user-images.githubusercontent.com/62821148/163165231-536948c1-ae0f-43c5-8972-bda77ecc191a.png)
 ![图片3](https://user-images.githubusercontent.com/62821148/163165239-2489cc06-7cd8-4521-81f6-25a019394ad9.png)
